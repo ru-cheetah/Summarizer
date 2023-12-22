@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Text Summarizer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/boxicon.min.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Template CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo.css') }}">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="index.html">
+                <i class='bx bx-buildings bx-sm text-dark'></i>
+                <span class="text-dark h4">Text</span> <span class="text-primary h4">Summarizer</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Banner Hero -->
+    <div class="banner-wrapper bg-light">
+        <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5">
+
+            <!-- Start slider -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1 class="banner-heading h1 text-secondary display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                    <strong>Summaries</strong> as per
+                                  <br>your needs
+                              </h1>
+                                <a class="banner-button btn rounded-pill btn-outline-primary btn-lg px-4" href="#about-us" role="button">Get Started</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End slider -->
+
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+    <!-- Start About Us -->
+    <section class="bg-secondary">
+        <div class="container py-5" id = "about-us">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-7 col-12 text-light pt-2">
+                    <h3 class="h4 light-300"><strong>Simplify complexity, harness clarity</strong></h3>
+                    <p class="light-300"> Transform information overload into actionable knowledge with precision and ease.</p>
+                </div>
+                <div class="col-lg-3 col-12 pt-4">
+                    <a href="#services" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us -->
+
+    <!-- Start Services -->
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="recent-work-header row text-center pb-5" id = "services">
+                <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Our Services</h2>
+            </div>
+            <div class="row gy-5 g-lg-5 mb-4">
+
+                <!-- Start document service -->
+                <div class="col-md-4 lg-3 ">
+                    <a href="#text-d" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="{{ url_for('static', filename='img/recent-work-1.jpg') }}" alt="Card image">
+                        
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                
+                                <h3 class="card-title light-300">Text Documents</h3>
+                                <p class="card-text">Upload your PDF and see the magic for yourself!</p>
+                                
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div><!-- End document service -->
+
+                <!-- Start audio file service -->
+                <div class="col-md-4 lg-3 ">
+                    <a href="#aud" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="{{ url_for('static', filename='img/recent-work-2.jpg') }}" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Audio files</h3>
+                                <p class="card-text">A quick listen and we'll tell you all you need to know :D</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End audio file service -->
+
+                <!-- Start custom input service -->
+                <div class="col-md-4 lg-3 ">
+                    <a href="#c-inp" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="{{ url_for('static', filename='img/recent-work-3.jpg') }}" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Custom Input</h3>
+                                <p class="card-text">Send us your own drafts!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End custom input service -->
+
+                <!-- Start URL service -->
+                <div class="col-md-4 lg-3 ">
+                    <a href="#urll" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="{{ url_for('static', filename='img/recent-work-4.jpg') }}" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Links/URL's</h3>
+                                <p class="card-text">Provide links of the sources</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End URL service -->
+            </div>
+        </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Text Documents -->
+
+    <section class="bg-secondary">
+        <div class="container py-5" id = "text-d">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-6 col-12 text-light pt-2">
+                    <h2 class="h2 light-300"><strong><bold>PDFiles</bold></strong></h2>
+                    <p class="light-300">Upload your text documents over here to extract a concise summary.</p>
+                </div>
+                <div class="col-lg-6 col-12 pt-4">
+
+                    <form action="/" method="post" style="margin-top: 0%;" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <div class="btn btn-default browse-button">
+                                    <span class="browse-button-text">
+                                        <i class="fa fa-folder-open"></i> Browse
+                                    </span>
+                                    <input type="file" accept=".pdf" name="attachment" />
+                                </div>
+                                <button type="button" class="btn btn-default clear-button" style="display:none;">
+                                    <span class="fa fa-times"></span> Clear
+                                </button>
+                            </span>
+                            <input type="text" class="form-control filename" disabled="disabled" placeholder="Please click on the browse button and select a pdf file">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary upload-button" type="submit">
+                                    <i class="fa fa-upload"></i>
+                                    Upload
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                    
+                    {% if pdf_summary %}
+                        <section class="bg-secondary">
+                            <div class="container py-5">
+                                <div class="row d-flex justify-content-center text-center">
+                                    <div class="col-lg-6 col-12 text-light pt-2">
+                                        <h2 class="h2 light-300"><strong>PDF Summary</strong></h2>
+                                        <p class="light-300">{{ pdf_summary }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    {% endif %}
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- End of text documents -->
+
+    <!-- Audio File services -->
+    <section class="py-5mb-5">
+        <!-- <div class="container py-5" id = "aud">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-6 col-12 pt-4"> -->
+                     <!-- <button  class="btn btn-primary rounded-pill btn-block shadow px-4 py-2" style="margin-left: 10px; margin-right: 10px; margin-bottom: 20px;">Upload</button>
+                    <button class = "btn btn-outline-dark rounded-pill btn-block shadow px-4py-2" style="margin-bottom: 20px;">Take a listen!</button>
+                    <input type="file" onchange="previewFile()" accept="audio/*"><br>
+                    <audio controls src=""></audio>
+
+                    <div id="result"></div> -->
+                
+                <!-- </div>
+                <div class="col-lg-6 col-12 text-light pt-2">
+                    <h2 class="h2 light-300"  style="color: black;"><strong><bold>Audio Recordings</bold></strong></h2>
+                    <p class="light-300" style="color: black;">Send us your audio reports to gain essential insights.</p>
+                </div>
+                
+            </div>
+        </div> -->
+    </section>
+    <!-- End services -->
+
+    <!-- Custom input -->
+
+    <section class="bg-secondary">
+        <div class="container py-5" id = "c-inp">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-6 col-12 text-light pt-2">
+                    <h2 class="h2 light-300"><strong><bold>Custom Input</bold></strong></h2>
+                    <p class="light-300">Type out your own thoughts to form a concise opinion.</p>
+                </div>
+                <div class="col-lg-6 col-12 pt-4">
+                    <form action="/" method="post" style="margin-top: 0%;">
+                    <div class="form-group">
+                        <textarea class="form-control" name = "comment_custom_area" placeholder="Enter your text here." rows="5" id="comment_custom_area"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-outline-light rounded-pill btn-block shadow px-4 py-2"  value="Generate Summary">
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of custom input -->
+
+    <!-- URL services -->
+    <section class="py-5mb-5">
+        <div class="container py-5" id = "urll">
+            <div class="row d-flex justify-content-center text-center">
+                
+                <div class="col-lg-6 col-12 pt-4">
+                    <form action="/" method="post" style="margin-top: 0px;">
+                    <input type="url" class="form-control"  aria-describedby="inputGroup-sizing-sm" placeholder="Article URL" name = "comment_link_or_url" id = "comment_link_or_url">
+                    <!-- <button  class="btn btn-primary rounded-pill btn-block shadow px-4 py-2" style="margin-left: 10px; margin-right: 10px;">See the magic!</buton> -->
+                        <input type="submit" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">
+                    </form>
+                </div>
+                <div class="col-lg-6 col-12 text-light pt-2">
+                    <h2 class="h2 light-300"  style="color: black;"><strong><bold>Links & URL</bold></strong></h2>
+                    <p class="light-300" style="color: black;">Upload the links of the articles for an awesome short summary</p>
+                </div>
+            </div>
+            <div id = "summaryResult_url">
+
+                {% if error_message %}
+                    <p style="color: red;">{{ error_message }}</p>
+                {% endif %}
+
+                {% if summary %}
+                    <h2>Title: {{ title }}</h2>
+                    <p>Authors: {{ authors }}</p>
+                    <p>Publication Date: {{ publish_date }}</p>
+                    <p>Summary: {{ summary }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <!-- End URL services -->
+
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+
+                <div class="col-lg-12 col-12  justify-content-center text-center">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">Text</span> <span class="text-light h5 semi-bold-600">Summarizer</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        Feel free to contact us in either of the socials:
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com/">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                <i class='bx bxl-linkedin-square bx-md'></i>
+                            </a>
+                        </li>
+        
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3 ">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Text Summarizer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.js') }}"></script>
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    document.addEventListener("DOMContentLoaded", function () {
+        var generateSummaryBtns = document.querySelectorAll('.generate-summary-btn');
+
+        generateSummaryBtns.forEach(function (btn) {
+            btn.addEventListener('click', function (event) {
+                event.preventDefault();
+                var form = event.target.closest('form');
+                var summaryResultDiv;
+
+                // Determine which summaryResultDiv to use based on input type
+                if (form.getAttribute('id') === 'custom-input-form') {
+                    summaryResultDiv = document.getElementById('summaryResult');
+                } else if (form.getAttribute('id') === 'url-input-form') {
+                    summaryResultDiv = document.getElementById('summaryResult_url');
+                }
+
+                fetch('/', {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.input_type === 'custom_text') {
+                            summaryResultDiv.innerHTML = '<h2>Custom Text Summary</h2><p>' + data.summary + '</p>';
+                        } else if (data.input_type === 'url') {
+                            summaryResultDiv.innerHTML = '<h2>URL Summary</h2><p>' + data.summary + '</p>';
+                        } else {
+                            summaryResultDiv.innerHTML = '<p>Error: Invalid input</p>';
+                        }
+                    })
+                    .catch(error => {
+                        summaryResultDiv.innerHTML = '<p>Error: ' + error.message + '</p>';
+                    });
+            });
+        });
+    });
+
+    function submitForm(event) {
+        event.preventDefault();
+        var form = event.target;
+        var formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            var summaryResultDiv = document.getElementById('summaryResult');
+            if (data.input_type === 'custom_text') {
+                summaryResultDiv.innerHTML = '<h2>Custom Text Summary</h2><p>' + data.summary + '</p>';
+            } else if (data.input_type === 'url') {
+                summaryResultDiv.innerHTML = '<h2>URL Summary</h2><p>' + data.summary + '</p>';
+            } else {
+                summaryResultDiv.innerHTML = '<p>Error: Invalid input</p>';
+            }
+        })
+        .catch(error => {
+            var summaryResultDiv = document.getElementById('summaryResult');
+            summaryResultDiv.innerHTML = '<p>Error: ' + error.message + '</p>';
+        });
+    }
+
+    $(".browse-button input:file").change(function (){
+    $("input[name='attachment']").each(function() {
+        var fileName = $(this).val().split('/').pop().split('\\').pop();
+        $(".filename").val(fileName);
+        $(".browse-button-text").html('<i class="fa fa-refresh"></i> Change');
+        $(".clear-button").show();
+    });
+    });
+
+    //actions happening when the button is clicked
+    $('.clear-button').click(function(){
+        $('.filename').val("");
+        $('.clear-button').hide();
+        $('.browse-button input:file').val("");
+        $(".browse-button-text").html('<i class="fa fa-folder-open"></i> Browse'); 
+    }); 
+    </script>
+    <!-- Templatemo -->
+    <script src="{{ url_for('static', filename='js/templatemo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+</html>
